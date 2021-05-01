@@ -1,0 +1,24 @@
+<?php
+
+
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Kouja\ProjectAssistantPackage\Bases\BaseModel;
+
+class {{ class }} extends BaseModel
+{
+    use HasFactory;
+
+    protected $table = '';
+
+    protected $fillable = [];
+
+    protected $hidden = [];
+
+    protected $dates = [];
+
+    protected $casts = [];
+
+}

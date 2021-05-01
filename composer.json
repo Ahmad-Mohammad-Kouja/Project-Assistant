@@ -1,0 +1,30 @@
+{
+    "name": "kouja/project-assistant",
+    "description": "Package for installing initial files and dependencies for starting your project",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmad Kouja",
+            "email": "ahmadkoujaak7@hotmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Kouja\\ProjectAssistantPackage\\": "src"
+        }
+    },
+
+    "extra": {
+        "laravel" : {
+            "providers": [
+                "Kouja\\ProjectAssistantPackage\\ProjectAssistantServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.2"
+    }
+}
