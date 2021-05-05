@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Helpers;
+namespace Kouja\ProjectAssistant\Helpers;
 
 
 use Illuminate\Contracts\Validation\Validator;

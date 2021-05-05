@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Rules;
+namespace Kouja\ProjectAssistant\Rules;
 
 
 use Illuminate\Contracts\Validation\Rule;

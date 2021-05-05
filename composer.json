@@ -13,14 +13,14 @@
 
     "autoload": {
         "psr-4": {
-            "Kouja\\ProjectAssistantPackage\\": "src"
+            "Kouja\\ProjectAssistant\\": "src"
         }
     },
 
     "extra": {
         "laravel" : {
             "providers": [
-                "Kouja\\ProjectAssistantPackage\\ProjectAssistantServiceProvider"
+                "Kouja\\ProjectAssistant\\ProjectAssistantServiceProvider"
             ]
         }
     },

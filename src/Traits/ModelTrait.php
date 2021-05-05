@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Traits;
+namespace Kouja\ProjectAssistant\Traits;
 
 use Exception;
-use Kouja\ProjectAssistantPackage\Exceptions\CreatingModelFailException;
-use Kouja\ProjectAssistantPackage\Exceptions\DeletingModelFailException;
-use Kouja\ProjectAssistantPackage\Exceptions\InsertingDataFailException;
-use Kouja\ProjectAssistantPackage\Exceptions\UpdatingModelFailException;
+use Kouja\ProjectAssistant\Exceptions\CreatingModelFailException;
+use Kouja\ProjectAssistant\Exceptions\DeletingModelFailException;
+use Kouja\ProjectAssistant\Exceptions\InsertingDataFailException;
+use Kouja\ProjectAssistant\Exceptions\UpdatingModelFailException;
 
 trait ModelTrait
 {

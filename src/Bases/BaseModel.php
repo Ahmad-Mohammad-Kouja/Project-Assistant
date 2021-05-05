@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Bases;
+namespace Kouja\ProjectAssistant\Bases;
 
 
 use Illuminate\Database\Eloquent\Model;
-use Kouja\ProjectAssistantPackage\Traits\ModelTrait;
+use Kouja\ProjectAssistant\Traits\ModelTrait;
 
 abstract class BaseModel extends Model
 {

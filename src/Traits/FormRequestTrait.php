@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Traits;
+namespace Kouja\ProjectAssistant\Traits;
 
 
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
-use Kouja\ProjectAssistantPackage\Helpers\ValidateHelper;
+use Kouja\ProjectAssistant\Helpers\ValidateHelper;
 
 trait FormRequestTrait
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Bases;
+namespace Kouja\ProjectAssistant\Bases;
 
 
 use Illuminate\Routing\Controller;

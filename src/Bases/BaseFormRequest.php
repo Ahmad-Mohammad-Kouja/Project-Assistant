@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Bases;
+namespace Kouja\ProjectAssistant\Bases;
 
 
 use Illuminate\Foundation\Http\FormRequest;
-use Kouja\ProjectAssistantPackage\Traits\FormRequestTrait;
+use Kouja\ProjectAssistant\Traits\FormRequestTrait;
 
 abstract class BaseFormRequest extends FormRequest
 {

@@ -1,12 +1,12 @@
 <?php
-namespace Kouja\ProjectAssistantPackage;
+namespace Kouja\ProjectAssistant;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Kouja\ProjectAssistantPackage\Command\InitialDataBase;
-use Kouja\ProjectAssistantPackage\Command\InitialPackages;
-use Kouja\ProjectAssistantPackage\Command\MakeModel;
-use Kouja\ProjectAssistantPackage\Command\MakeRequest;
+use Kouja\ProjectAssistant\Command\InitialDataBase;
+use Kouja\ProjectAssistant\Command\InitialPackages;
+use Kouja\ProjectAssistant\Command\MakeModel;
+use Kouja\ProjectAssistant\Command\MakeRequest;
 use Illuminate\Support\Str;
 
 class ProjectAssistantServiceProvider extends ServiceProvider

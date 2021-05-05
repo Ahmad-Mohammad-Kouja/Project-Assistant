@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Helpers;
+namespace Kouja\ProjectAssistant\Helpers;
 
 
 use Illuminate\Support\Facades\Storage;
-use Kouja\ProjectAssistantPackage\Exceptions\OperationFailException;
+use Kouja\ProjectAssistant\Exceptions\OperationFailException;
 
 class FileClass
 {

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Exceptions;
+namespace Kouja\ProjectAssistant\Exceptions;
 
 use Exception;
-use Kouja\ProjectAssistantPackage\Helpers\ResponseHelper;
+use Kouja\ProjectAssistant\Helpers\ResponseHelper;
 
 class DeletingModelFailException extends Exception
 {

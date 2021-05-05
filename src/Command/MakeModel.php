@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kouja\ProjectAssistantPackage\Command;
+namespace Kouja\ProjectAssistant\Command;
 
 
 use Illuminate\Foundation\Console\ModelMakeCommand;

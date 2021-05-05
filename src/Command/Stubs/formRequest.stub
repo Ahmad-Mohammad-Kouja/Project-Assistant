@@ -4,7 +4,7 @@
 namespace {{ namespace }};
 
 
-use Kouja\ProjectAssistantPackage\Bases\BaseFormRequest;
+use Kouja\ProjectAssistant\Bases\BaseFormRequest;
 
 class {{ class }} extends BaseFormRequest
 {
