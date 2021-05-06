@@ -110,13 +110,19 @@ class ResponseHelper
         return response()->json(['status' => 'ERROR', 'message' => $message], 440);
     }
 
-
+    /**
+     * @param null $message
+     * @return \Illuminate\Http\JsonResponse
+     */
     public static function invalidPhone($message = "Invalid Phone")
     {
         return response()->json(['status' => 'ERROR' , 'message' => $message] , 450);
     }
 
-
+    /**
+     * @param null $message
+     * @return \Illuminate\Http\JsonResponse
+     */
     public static function invalidData($message = "Invalid Data")
     {
         return response()->json(['status' => 'ERROR', 'message' => $message], 460);
