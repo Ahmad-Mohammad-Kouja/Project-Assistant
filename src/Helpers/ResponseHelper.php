@@ -12,9 +12,9 @@ class ResponseHelper
      * @param mixed $data
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function operationSuccess($message = "operation Success")
+    public static function operationSuccess($data = "operation Success")
     {
-        return response()->json(['status' => 'OK','message' => $message], 200);
+        return response()->json(['status' => 'OK','data' => $data], 200);
     }
 
     /**
