@@ -57,8 +57,8 @@ class ProjectAssistantServiceProvider extends ServiceProvider
         ], 'FileClass');
 
         $this->publishes([
-            __DIR__.'/Helpers/OperationalResult.php' => app_path('Helpers/OperationalResult.php')
-        ], 'OperationalResult');
+            __DIR__.'/Helpers/OperationResult.php' => app_path('Helpers/OperationResult.php')
+        ], 'OperationResult');
 
         $this->publishes([
             __DIR__.'/Helpers/ResponseHelper.php' => app_path('Helpers/ResponseHelper.php')

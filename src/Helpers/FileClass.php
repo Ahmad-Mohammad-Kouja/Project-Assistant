@@ -55,31 +55,31 @@ class FileClass
 
     }
 
-    public function CheckFile($filePath) : OperationalResult
+    public function CheckFile($filePath) : OperationResult
     {
-        $operationalResult = new OperationalResult();
+        $OperationResult = new OperationResult();
         try {
-            $operationalResult->data =  Storage::disk($this->disk)->exists($filePath);
+            $OperationResult->data =  Storage::disk($this->disk)->exists($filePath);
         }Catch(\Exception $exception)
         {
-            $operationalResult->isSuccess = false;
-            $operationalResult->data = $exception;
-            $operationalResult->statues = 500;
+            $OperationResult->isSuccess = false;
+            $OperationResult->data = $exception;
+            $OperationResult->status = 500;
         }
-        return $operationalResult;
+        return $OperationResult;
     }
 
     public function getFile($filePath)
     {
-        $operationalResult = new OperationalResult();
+        $OperationResult = new OperationResult();
         try {
-            $operationalResult->data =  Storage::disk($this->disk)->get($filePath);
+            $OperationResult->data =  Storage::disk($this->disk)->get($filePath);
         }Catch(\Exception $exception)
         {
-            $operationalResult->isSuccess = false;
-            $operationalResult->data = $exception;
-            $operationalResult->statues = 500;
+            $OperationResult->isSuccess = false;
+            $OperationResult->data = $exception;
+            $OperationResult->status = 500;
         }
-        return $operationalResult;
+        return $OperationResult;
     }
 }
