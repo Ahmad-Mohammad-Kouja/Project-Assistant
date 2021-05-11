@@ -5,7 +5,6 @@ namespace Kouja\ProjectAssistant\Helpers;
 
 
 use Illuminate\Support\Facades\Storage;
-use Kouja\ProjectAssistant\Exceptions\OperationFailException;
 
 class FileClass
 {
@@ -30,56 +29,63 @@ class FileClass
 
 
 
-    public function uploadFile($file, $fileName , $path)
+    public function uploadFile($file, $fileName , $path) : OperationResult
     {
+        $operationalResult = new OperationResult();
         try {
             Storage::disk($this->disk)->put($path.$fileName, fopen($file, 'r+'),'public');
-           $data = $path.$fileName;
+           $operationalResult->data =  $path.$fileName;
         }catch (\Exception $exception)
         {
-            throw new OperationFailException($exception->getMessage());
+            $operationalResult->isSuccess = false;
+            $operationalResult->data = $exception->getMessage();
+            $operationalResult->statues = 500;
         }
-          return $data;
+          return $operationalResult;
     }
 
 
-    public function deleteFiles($filesPaths)
+    public function deleteFiles($filesPaths) : OperationResult
     {
+        $operationalResult = new OperationResult();
         try {
-           $data =  Storage::disk($this->disk)->delete($filesPaths);
+           $operationalResult->data =  Storage::disk($this->disk)->delete($filesPaths);
         }Catch(\Exception $exception)
         {
-            throw new OperationFailException($exception->getMessage());
+            $operationalResult->isSuccess = false;
+            $operationalResult->data = $exception;
+            $operationalResult->statues = 500;
         }
-        return $data;
+        return $operationalResult;
 
     }
 
-    public function CheckFile($filePath) : OperationResult
+    public function CheckFile($filePath)
     {
-        $OperationResult = new OperationResult();
+        $operationalResult = new OperationResult();
         try {
-            $OperationResult->data =  Storage::disk($this->disk)->exists($filePath);
+            $operationalResult->data =  Storage::disk($this->disk)->exists($filePath);
         }Catch(\Exception $exception)
         {
-            $OperationResult->isSuccess = false;
-            $OperationResult->data = $exception;
-            $OperationResult->status = 500;
+            $operationalResult->isSuccess = false;
+            $operationalResult->data = $exception;
+            $operationalResult->statues = 500;
         }
-        return $OperationResult;
+        return $operationalResult;
     }
 
     public function getFile($filePath)
     {
-        $OperationResult = new OperationResult();
+        $operationalResult = new OperationResult();
         try {
-            $OperationResult->data =  Storage::disk($this->disk)->get($filePath);
+            $operationalResult->data =  Storage::disk($this->disk)->get($filePath);
         }Catch(\Exception $exception)
         {
-            $OperationResult->isSuccess = false;
-            $OperationResult->data = $exception;
-            $OperationResult->status = 500;
+            $operationalResult->isSuccess = false;
+            $operationalResult->data = $exception;
+            $operationalResult->statues = 500;
         }
-        return $OperationResult;
+        return $operationalResult;
+
     }
 }

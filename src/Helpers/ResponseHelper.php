@@ -12,25 +12,7 @@ class ResponseHelper
      * @param mixed $data
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function operationSuccess($data = "operation Success")
-    {
-        return response()->json(['status' => 'OK','data' => $data], 200);
-    }
-
-    /**
-     * @param mixed $data
-     * @return \Illuminate\Http\JsonResponse
-     */
     public static function select($data = null)
-    {
-        return response()->json(['status' => 'OK','data' =>$data], 210);
-    }
-
-    /**
-     * @param mixed $data
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function create($data = null)
     {
         return response()->json(['status' => 'OK','data' =>$data], 220);
     }
@@ -53,23 +35,23 @@ class ResponseHelper
     }
 
     /**
-     * @param string $message
+     * @param string $msg
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function delete($message = "Deleted Successfully")
+    public static function delete($msg = "Deleted Successfully")
     {
-        return response()->json(['status' => 'OK', 'message' => $message], 250);
+        return response()->json(['status' => 'OK', 'msg' => $msg], 250);
     }
 
 
     /**
-     * @param string $message
+     * @param string $msg
      * @return \Illuminate\Http\JsonResponse
      */
 
-    public static function MissingParameter($message = "Missing Required Param")
+    public static function MissingParameter($msg = "Missing Required Param")
     {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 400);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 400);
     }
 
     /**
@@ -77,18 +59,18 @@ class ResponseHelper
      * isEmpty Array exception
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function DataNotFound($message = "Data Not Found")
+    public static function DataNotFound($msg = "Data Not Found")
     {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 410);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 410);
     }
 
     /**
-     * @param string $message
+     * @param string $msg
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function AlreadyExists($message = "Already Exists")
+    public static function AlreadyExists($msg = "Already Exists")
     {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 420);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 420);
     }
 
     /**
@@ -96,95 +78,40 @@ class ResponseHelper
      * not authorized user
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function authenticationFail($message = "Not Authenticated")
+    public static function authenticationFail($msg = "Not Authenticated")
     {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 430);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 430);
     }
 
     /**
-     * @param null $message
+     * @param null $msg
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function authorizationFail($message = "Not Authorized")
+    public static function authorizationFail($msg = "Not Authorized")
     {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 440);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 440);
     }
 
-    /**
-     * @param null $message
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function invalidPhone($message = "Invalid Phone")
+
+    public static function invalidPhone($msg = "Invalid Phone")
     {
-        return response()->json(['status' => 'ERROR' , 'message' => $message] , 450);
+        return response()->json(['status' => 'ERROR' , 'msg' => $msg] , 450);
     }
 
-    /**
-     * @param null $message
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function invalidData($message = "Invalid Data")
+
+    public static function invalidData($msg = "Invalid Data")
     {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 460);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 460);
     }
 
 
     /**
-     * @param null $message
+     * @param null $msg
      * @return \Illuminate\Http\JsonResponse
      */
-    public static function operationFail($message  = null)
+    public static function operationFail($msg = "Operation Fail")
     {
-        empty($message) && $message = "opertaion fail";
-        return response()->json(['status' => 'ERROR', 'message' => $message], 510);
-    }
-
-    public static function creatingFail($message  = null)
-    {
-        empty($message) && $message = "creating fail";
-        return response()->json(['status' => 'ERROR', 'message' => $message], 520);
-    }
-
-    /**
-     * @param null $message
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function insertingFail($message = null)
-    {
-        empty($message) && $message = "inserting fail";
-        return response()->json(['status' => 'ERROR', 'message' => $message], 530);
-    }
-
-
-    /**
-     * @param null $message
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function updatingFail($message = null)
-    {
-        empty($message) && $message = "updating fail";
-        return response()->json(['status' => 'ERROR', 'message' => $message], 540);
-    }
-
-
-    /**
-     * @param null $message
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function deletingFail($message  = null)
-    {
-        empty($message) && $message = "deleting fail";
-        return response()->json(['status' => 'ERROR', 'message' => $message], 550);
-    }
-
-
-    /**
-     * @param null $message
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public static function serverError($message  = "server error")
-    {
-        return response()->json(['status' => 'ERROR', 'message' => $message], 560);
+        return response()->json(['status' => 'ERROR', 'msg' => $msg], 510);
     }
 
 
